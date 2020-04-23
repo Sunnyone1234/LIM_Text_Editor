@@ -17,7 +17,7 @@ There are six common sequence data structures: [array](https://en.wikipedia.org/
 | insert/delte line | | | | adding or deleting the line descriptor so O(1) | | |
 
 ## Choice of language
-C and C++ will be used for this project. The text editor control will be written in C++ and provide a interface to main application, which is written in "pure win32" C.
+C and C++ will be used for this project. The text editor control will be written in C++ and provide a interface to main application, which is written in "pure win32" C, the [windows data type](https://docs.microsoft.com/en-us/windows/win32/winprog/windows-data-types) will be used.
 
 ## Text Editor structure
 The structure of Text Editor is like a tower.  
@@ -28,3 +28,12 @@ The structure of Text Editor is like a tower.
 |TextDocument| <- store and manipulate a text file|
 |Text File||
 
+## Function of text editor control
+Fast, smooth graphic display.
+Syntax colouring
+Full clipboard and drag-and-drop support
+Single-font?
+complete Undo and Redo support
+ASCII, Unicode and UTF-8 compatible
+
+## 
