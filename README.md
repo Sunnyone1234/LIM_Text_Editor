@@ -15,3 +15,13 @@ There are six common sequence data structures: [array](https://en.wikipedia.org/
 | insert/delete at one site | O(n)  | insert:O(1)/delet:O(n)  | O(1)/grow_up:O(n)/left or right:O(n)  | insert:used copy so O(n) or O(copylength)/ delete: O(1)  | works as arrayO(n)  |   |
 | insert/delete in middle  | O(n) | insert:O(1)/delet:O(n)  | O(1)/grow_up:O(n)/left or right:O(n)  | inster:used copy so O(n) or O(copylength)/delete: must moving the rest so O(n)  | works as arrayO(n)  |   |
 | insert/delte line | | | | adding or deleting the line descriptor so O(1) | | |
+
+## Text Editor structure
+The structure of Text Editor is like a tower.  
+|component|description|
+|---|---|
+|Main Window| <- title, menu, status bars|
+|TextView| <- child of main window, display and edit text, display scrollbars, process mouse and keyboard input|
+|TextDocument| <- store and manipulate a text file|
+|Text File||
+
