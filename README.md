@@ -16,6 +16,9 @@ There are six common sequence data structures: [array](https://en.wikipedia.org/
 | insert/delete in middle  | O(n) | insert:O(1)/delet:O(n)  | O(1)/grow_up:O(n)/left or right:O(n)  | inster:used copy so O(n) or O(copylength)/delete: must moving the rest so O(n)  | works as arrayO(n)  |   |
 | insert/delte line | | | | adding or deleting the line descriptor so O(1) | | |
 
+## Choice of language
+C and C++ will be used for this project. The text editor control will be written in C++ and provide a interface to main application, which is written in "pure win32" C.
+
 ## Text Editor structure
 The structure of Text Editor is like a tower.  
 |component|description|
