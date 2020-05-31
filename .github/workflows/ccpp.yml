@@ -3,21 +3,19 @@ name: C/C++ CI
 on:
   push:
     branches: [ master ]
-  pull_request:
-    branches: [ master ]
+    paths-ignore: 
+      - '**.md'
 
 jobs:
-  build:
-
-    runs-on: ubuntu-latest
+  build-windows:
+    name: build
+    runs-on: windows-latest
 
     steps:
     - uses: actions/checkout@v2
     - name: configure
-      run: ./configure
-    - name: make
-      run: make
-    - name: make check
-      run: make check
-    - name: make distcheck
-      run: make distcheck
+      run: mkdir build && cd build && cmake ..
+    - name: build
+      run: cmake --build .
+    - name: test
+      run: ctest
