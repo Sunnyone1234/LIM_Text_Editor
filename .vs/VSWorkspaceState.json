@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\apps",
+    "\\cmake",
+    "\\docs",
+    "\\extern",
+    "\\include",
+    "\\include\\project",
+    "\\scripts",
+    "\\src",
+    "\\tests"
+  ],
+  "SelectedNode": "\\.gitignore",
+  "PreviewInSolutionExplorer": false
+}
