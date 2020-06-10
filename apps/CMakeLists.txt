@@ -6,23 +6,3 @@ if(EXISTS "${IS_IN_SOURCE_DIR}")
     directory (or any directory with a CMakeLists.txt file). 
     Please make a build subdirectory with ¡®mkdir build¡¯.")
 endif()
-
-#Add paths in which the linker should find path to src
-link_directories(${LIM_Text_Editor_SOURCE_DIR}/src)
-
-find_package(wxWidgets REQUIRED gl core base OPTIONAL_COMPONENTS net)
-include(${wxWidgets_USE_FILE})
-
-#Add excutable
-if(WIN32)
-    #set subsystem windows
-     add_executable(MainProject WIN32 main.cpp)
- else()
-     add_executable(MainProject main.cpp)
- endif()
-
-
-
-#Link excutable with libs
-#target_link_libraries(MainProject PRIVATE Libs sqlite3)
-target_link_libraries(MainProject PRIVATE Libs ${wxWidgets_LIBRARIES})
