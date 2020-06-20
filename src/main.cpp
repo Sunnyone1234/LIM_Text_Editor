@@ -4,6 +4,7 @@
 #pragma hdrstop
 #endif
 
+//App start
 wxIMPLEMENT_APP(MyApp);
 
 bool MyApp::OnInit()
