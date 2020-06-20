@@ -38,11 +38,22 @@ MyFrame::MyFrame(const wxString& title)
     menuBar->Append(helpMenu, "&Help");
 
     SetMenuBar(menuBar);
+
+    //bind eventhandler
+    Bind(wxEVT_COMMAND_MENU_SELECTED, &MyFrame::OnQuit, this, EDITOR_Quit);
+    Bind(wxEVT_COMMAND_MENU_SELECTED, &MyFrame::OnAbout, this, EDITOR_About);
+    Bind(wxEVT_COMMAND_MENU_SELECTED, &MyFrame::OnNew, this, EDITOR_New);
+    Bind(wxEVT_COMMAND_MENU_SELECTED, &MyFrame::OnSave, this, EDITOR_Save);
+    Bind(wxEVT_COMMAND_MENU_SELECTED, &MyFrame::OnSaveAs, this, EDITOR_SaveAs);
+
 }
 
-void MyFrame::OnNew(wxCommandEvent& WXUNUSED(event)){}
-void MyFrame::OnSave(wxCommandEvent& WXUNUSED(event)) {}
-void MyFrame::OnSaveAs(wxCommandEvent& WXUNUSED(event)) {}
+void MyFrame::OnNew(wxCommandEvent& WXUNUSED(event)){//TODO::
+}
+void MyFrame::OnSave(wxCommandEvent& WXUNUSED(event)) {//TODO::
+}
+void MyFrame::OnSaveAs(wxCommandEvent& WXUNUSED(event)) {//TODO::
+}
 void MyFrame::OnQuit(wxCommandEvent& WXUNUSED(event))
 {
     Close(true);

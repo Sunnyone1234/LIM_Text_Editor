@@ -24,7 +24,6 @@ public:
     void OnAbout(wxCommandEvent& event);
 
 private:
-    wxDECLARE_EVENT_TABLE();
 };
 
 //enum Button ID
@@ -36,14 +35,5 @@ enum
     EDITOR_Quit = wxID_EXIT,
     EDITOR_About = wxID_ABOUT
 };
-
-//Add Button ID in Event Table
-wxBEGIN_EVENT_TABLE(MyFrame, wxFrame)
-EVT_MENU(EDITOR_New, MyFrame::OnNew)
-EVT_MENU(EDITOR_Save, MyFrame::OnSave)
-EVT_MENU(EDITOR_SaveAs, MyFrame::OnSaveAs)
-EVT_MENU(EDITOR_Quit, MyFrame::OnQuit)
-EVT_MENU(EDITOR_About, MyFrame::OnAbout)
-wxEND_EVENT_TABLE()
 
 #endif // !MAIN_HPP
