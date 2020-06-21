@@ -6,15 +6,22 @@
 
 class Text {
 public:
-	uint8_t init(int8_t *fliename);
-	uint8_t inithFile(HANDLE hFile);
+	Text();
+	~Text();
 
-	uint64_t getline(uint64_t lineno, uint8_t* buf, uint32_t len);
+	bool init(int8_t *fliename);
+	bool inithFile(HANDLE hFile);
+	bool clear();
+
+	uint64_t getline(uint64_t lnr, int8_t* buf, uint64_t len);
 	uint64_t linecount();
+	uint64_t longestline();
 private:
 	bool init_linebuffer();
 	int8_t* buffer;
-	uint32_t length;
+	uint64_t* linebuffer;
+	uint64_t length;
+	uint64_t linenr;
 };
 
 
