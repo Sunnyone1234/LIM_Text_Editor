@@ -1,4 +1,5 @@
 #include "main.hpp"
+#include "view.hpp"
 
 #ifdef __BORLANDC__
 #pragma hdrstop
@@ -11,8 +12,17 @@ bool MyApp::OnInit()
 {
     if (!wxApp::OnInit())
         return false;
-
+    //wxBoxSizer* sizer = new wxBoxSizer(wxHORIZONTAL);
     MyFrame* frame = new MyFrame("Minimal wxWidgets App");
+    EDITOR_Panel* mainPanel = new EDITOR_Panel(frame);
+    mainPanel->SetBackgroundColour(wxColor(47,79,79));
+    wxScrolledWindow* scrl;
+
+	scrl = new wxScrolledWindow(mainPanel, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxHSCROLL|wxVSCROLL );
+    //sizer->Add(mainPanel, 1, wxEXPAND);
+
+    //frame->SetSizer(sizer);
+    //frame->SetAutoLayout(true);
 
     frame->Show(true);
 
