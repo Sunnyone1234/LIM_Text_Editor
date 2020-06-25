@@ -3,7 +3,7 @@
 class Textview {
 public:
 	Textview(){}
-	ApplyTextProperty(){}
+	int ApplyTextProperty(){}
 };
 
 #endif // !TEXTVIEW_HPP
