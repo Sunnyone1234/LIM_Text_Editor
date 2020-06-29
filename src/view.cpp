@@ -49,7 +49,7 @@ void EditorFrame::OnAbout(wxCommandEvent& WXUNUSED(event))
 }
 
 EditorScrollWindow::EditorScrollWindow(wxPanel* mainPanel)
-    : wxScrolledWindow(mainPanel, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxHSCROLL | wxVSCROLL) {
+    : wxScrolledWindow(mainPanel, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxVSCROLL) {//only vertical roll for text editor
 }
 
 EditorPanel::EditorPanel(wxFrame* parent) :
