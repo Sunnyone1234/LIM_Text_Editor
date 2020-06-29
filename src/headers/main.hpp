@@ -1,6 +1,9 @@
 #ifndef MAIN_HPP
 #define MAIN_HPP
-#include <wx/wx.h>
+
+#ifndef WX_PRECOMP
+#include "wx/wx.h"
+#endif
 
 class App : public wxApp
 {
